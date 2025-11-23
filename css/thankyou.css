@@ -1,0 +1,144 @@
+/* ===========================
+   Base & Fonts
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9fbfb;
+    color: #2f3e46;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #0a5f6f;
+}
+
+a {
+    text-decoration: none;
+    color: #0a5f6f;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #088;
+}
+
+/* ===========================
+   Header
+=========================== */
+.checkout-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e3f2f1;
+    padding: 18px 0;
+    margin-bottom: 35px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+.checkout-header .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0a5f6f;
+    letter-spacing: 1px;
+}
+
+.checkout-header nav a {
+    margin-right: 25px;
+    font-weight: 500;
+    color: #0a5f6f;
+}
+
+.checkout-header nav a:hover {
+    color: #088;
+}
+
+/* ===========================
+   Thank You Box
+=========================== */
+.thankyou-box {
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 45px;
+    border-radius: 14px;
+    border: 1px solid #e8f2f1;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.thankyou-box h1 {
+    font-size: 34px;
+    color: #056a6c;
+    margin-bottom: 15px;
+}
+
+.thankyou-box p {
+    font-size: 17px;
+    color: #444;
+    margin: 10px 0;
+}
+
+.thankyou-box ul.order-items {
+    margin-top: 25px;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    border-top: 1px solid #eee;
+}
+
+.thankyou-box ul.order-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 16px;
+    color: #333;
+}
+
+.thankyou-box strong {
+    color: #0a5f6f;
+}
+
+.thankyou-box .btn {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #0a5f6f;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.thankyou-box .btn:hover {
+    background-color: #088;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.checkout-footer {
+    background-color: #f5f9f9;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 600px) {
+    .thankyou-box {
+        padding: 30px 20px;
+    }
+    .thankyou-box h1 {
+        font-size: 28px;
+    }
+    .checkout-header .brand {
+        font-size: 22px;
+    }
+}
