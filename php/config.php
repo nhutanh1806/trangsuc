@@ -1,15 +1,21 @@
 <?php
-$host = "localhost";       // Máy chủ
-$dbname = "tiffany_shop";  // Tên database
-$username = "root";        // User mặc định XAMPP
-$password = "";            // Mật khẩu (thường để trống trên XAMPP)
+// LƯU Ý: Đây là cấu hình cho PostgreSQL (pgsql), KHÔNG phải MySQL (mysql)
+
+$db_host = 'dpg-d4hahm2li9vc73e361s0-a'; 
+$db_name = 'qibh_n097';
+$db_user = 'admin';
+// Đảm bảo mật khẩu không có dấu cách thừa
+$db_pass = 'YmkOyEH2dvu0jvcWMy8M9p8tMQSaPDICT';
 
 try {
-    // Tạo kết nối PDO
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    // QUAN TRỌNG: Thay đổi DSN từ mysql: sang pgsql:
+    $dsn = "pgsql:host=$db_host;dbname=$db_name";
+    
+    $pdo = new PDO($dsn, $db_user, $db_pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "Kết nối thành công"; // Có thể dùng để test
+    // echo "Kết nối thành công!"; // Sau khi test thành công thì xóa dòng này
 } catch (PDOException $e) {
-    die("Kết nối thất bại: " . $e->getMessage());
+    // Lỗi kết nối thất bại
+    die("Lỗi kết nối database: " . $e->getMessage());
 }
 ?>
